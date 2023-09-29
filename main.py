@@ -28,7 +28,6 @@ def check_url(url):
         print(f"SSL certificate for {url} is valid.")
     except requests.exceptions.SSLError:
         print(f"SSL certificate for {url} is not valid.")
-        return
     except requests.exceptions.RequestException as e:
         print(f"Could not connect to {url}: {e}")
         return
